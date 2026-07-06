@@ -1,21 +1,19 @@
-import statistics
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import matplotlib.pyplot as plt
 
 
 """
 Oriëntatie op AI
 
-Onderwerp: Statistiek
+Opdracht: Data science
 
-(c) 2024 Hogeschool Utrecht,
-Peter van den Berg (peter.vandenberg@hu.nl)`
-Veerle Hobbelink (veerle.hobbelink@hu.nl)
-
-Let op! Het is niet toegestaan om bestaande modules te importeren en te
-        gebruiken, zoals `math` en `statistics`.
+(c) 2025 Hogeschool Utrecht,
+Peter van den Berg (peter.vandenberg@hu.nl)
 
 Opdracht:
-Beantwoord onderstaande vragen en werk onderstaande functies uit.
+Werk onderstaande functies uit. Elke functie krijgt een niet-lege en
+ongesorteerde lijst *lst* met gehele getallen (int) als argument.
 Voeg commentaar toe om je code toe te lichten.
 
 Je kunt je functies testen met het gegeven raamwerk door het bestand
@@ -30,16 +28,16 @@ Let op! Het is niet toegestaan om bestaande modules te importeren en te
 naam = ""
 klas = ""
 studentnummer = -1
-                                                                                                                # XXX>
+
 
 """
 1. Implementatie mean
     Implementeer onderstaande functie om het gemiddelde van een lijst getallen te berekenen.
-"""
 
+"""
 def mean(lst):
     """
-    Bepaalt het gemiddelde van een lijst getallen.
+    Bepaal het gemiddelde van een lijst getallen.
 
     Args:
         lst (list): Een lijst met gehele getallen.
@@ -47,17 +45,19 @@ def mean(lst):
     Returns:
         float: Het gemiddelde van de gegeven getallen.
     """
-    return None
+    return
+
 
 """
 2. Implementatie q1
     Implementeer onderstaande functie om het eerste kwartiel van een lijst getallen te berekenen.
-    Hint: maak gebruik van `median()` uit statistiek_student.py (ja, deze mag je dus importeren)
+    
 """
-
 def q1(lst):
     """
-    Bepaalt het eerste kwartiel - Q1 - van een lijst getallen.
+    Bepaal het eerste kwartiel Q1 van een lijst getallen.
+
+    Hint: maak gebruik van `median()`
 
     Args:
         lst (list): Een lijst met gehele getallen.
@@ -65,118 +65,124 @@ def q1(lst):
     Returns:
         float: Het eerste kwartiel Q1 van de gegeven getallen.
     """
-    return None
+    return
+
 
 """
 3. Implementatie q3
     Implementeer onderstaande functie om het derde kwartiel van een lijst getallen te berekenen.
-    Hint: maak gebruik van `median()` uit statistiek_student.py (ja, deze mag je dus importeren)
+    
 """
-
 def q3(lst):
     """
-    Bepaalt het eerste kwartiel - Q3 - van een lijst getallen.
+    Bepaal het derde kwartiel Q3 van een lijst getallen.
 
     Args:
         lst (list): Een lijst met gehele getallen.
 
     Returns:
-        float: Het eerste kwartiel Q3 van de gegeven getallen.
+        float: Het derde kwartiel Q3 van de gegeven getallen.
     """
-    return None
+    return
+
 
 """
-4. Implementatie stdev
+4. Implementatie var
+    Implementeer onderstaande functie om de variantie van een lijst getallen te berekenen.
+    
+"""
+def var(lst):
+    """
+    Bepaal de variantie van een lijst getallen.
+
+    Args:
+        lst (list): Een lijst met gehele getallen.
+
+    Returns:
+        float: De variantie van de gegeven getallen.
+    """
+    return
+
+
+"""
+5. Implementatie std
     Implementeer onderstaande functie om de standaarddeviatie van een lijst getallen te berekenen.
-    Hint: maak gebruik van `mean()` uit bovenstaande vraag.
+    
 """
-
-def stdev(lst):
+def std(lst):
     """
-    Berekent de standaarddeviatie van een lijst met getallen.
-
-    Parameters:
-        lst (list): Een lijst met numerieke waarden.
-
-    Returns:
-        float: De standaarddeviatie van de lijst.
-    """
-
-    return None
-
-"""
-5. Implementatie iqr
-    Implementeer onderstaande functie om de interkwartielafstand van een lijst getallen te berekenen.
-"""
-
-def iqr(lst):
-    """
-    Berekent de interkwartielafstand van een lijst met getallen.
-
-    Parameters:
-        lst (list): Een lijst met numerieke waarden.
-
-    Returns:
-        float: De interkwartielafstand van de lijst.
-    """
-
-    return None
-
-"""
-6. Implementatie outliers
-    Implementeer onderstaande functie om de outliers van een lijst getallen te berekenen. Maak gebruik van de methode 
-    uit de slides. 
-    Hint: maak gebruik van `iqr()`uit de bovenstaande vraag.
-"""
-
-def outliers(lst):
-    """
-    Bepaalt de statistische uitschieters van een lijst met getallen.
+    Bepaal de standaardafwijking van een lijst getallen.
 
     Args:
-        lst (list): Een lijst met getallen.
+        lst (list): Een lijst met gehele getallen.
 
     Returns:
-        list: Een lijst met alle uitschieters van de gegeven getallen.
+        float: De standaardafwijking van de gegeven getallen.
     """
+    return
 
-    outlier_lst = []
-    return None
 
 """
-7. Implementatie z_scores
-    Implementeer onderstaande functie om de z-scores van een lijst getallen te berekenen, volgens onderstaande pseudocode:
-    1.	Onvang een lijst lst
-    2.	Bereken m = gemiddelde van lst
-    3.	Bereken s = stdev van lst
-    4.	z_scores = lege lijst
-    5.	Loop over elk element e in lst
-        i.	 Bereken d = e - m
-        ii.	 Bereken z = d / s
-        iii. Voeg z toe aan z_scores
-    f.	Retourneer z_scores
+6. Implementatie cor
+    Implementeer onderstaande functie om Pearsons correlatiecoëfficient r tussen twee lijsten van getallen te berekenen.
+    
 """
-
-def z_score(lst):
+def cor(x, y):
     """
-    Bepaalt de z-scores van een lijst volgens de volgende pseudocode:
+    Bereken de Pearsons correlatiecoëfficient r tussen twee lijsten van getallen.
 
     Args:
-        lst: Een lijst met gehele getallen.
+        x (list): De eerste lijst met gehele getallen.
+        y (list): De tweede lijst met gehele getallen.
 
-    Returns: list met z-scores
+    Returns:
+        float: Pearsons correlatiecoëfficient r.
     """
-    return None
+    
+    numerator = 0
+
+    denominator = std(x) * std(y)
+
+    return 0.0 if denominator == 0 else numerator / denominator                                              
+
+
+
+
+""", 
+7. Implementatie freq
+    Implementeer onderstaande functie om de frequenties van een lijst getallen te berekenen.
+    
+"""
+def freq(lst):
+    """
+    Bepaal de frequenties van alle getallen in een lijst.
+
+    Args:
+        lst (list): Een lijst met gehele getallen.
+
+    Returns:
+        dict: Een dictionary met als 'key' de waardes die voorkomen in de lijst
+            en als 'value' het aantal voorkomens (de frequentie) van die waarde.
+
+    Examples:
+        >> freq([0, 0, 4, 7, 7])
+        {0: 2, 4: 1, 7: 2}
+
+        >> freq([1, 1, 2, 3, 2, 1])
+        {1: 3, 2: 2, 3: 1}
+    """
+    freqs = dict()
+    return freqs
 
 """
 8. Implementatie plot_grades
-    Implementeer onderstaande functie om het gemiddelde eindcijfer t.o.v. de gemiddelde aanwezigheid te plotten in een staafdiagram.
+    Implementeer onderstaande functie om het gemiddelde eindcijfer t.o.v. de gemiddelde aanwezigheid te plotten in een spreidingsdiagram.
     - Toon een x- en een y-label
     - Toon een grafiektitel (dit heb je nog nooit hoeven doen en zul je zelf moeten uitzoeken) 
 """
 def plot_grades(presence, grade):
     """
-    Plot het gemiddelde eindcijfer t.o.v. de gemiddelde aanwezigheid te plotten in een staafdiagram. 
+    Plot het gemiddelde eindcijfer t.o.v. de gemiddelde aanwezigheid te plotten in een spreidingsdiagram. 
 
     Args:
         presence (list): Een lijst met gehele getallen.
@@ -184,37 +190,48 @@ def plot_grades(presence, grade):
     """
     plt.show()
 
+
 """
-9. Implementatie cumulatieve_frequenties (Optioneel)
-    Implementeer onderstaande functie om de cumulatieve frequenties van een lijst getallen te berekenen.
-"""
-
-def cumulatieve_frequenties(lst):
-    """
-        Berekent de cumulatieve frequenties van een lijst.
-
-        Parameters:
-            lst (list): Een lijst met numerieke waarden.
-
-        Returns:
-            dict: Een dictionary waarin elke unieke waarde gekoppeld is aan diens cumulatieve frequentie.
-        """
+(Optioneel)
+9. Implementatie modes
+    Implementeer onderstaande functie om de modi van een lijst getallen te berekenen.
     
-    return None
+"""
+def modes(lst):
+    """
+    Bepaal alle modi van een lijst getallen.
+
+    Hint: maak gebruik van `freq()`.
+
+    Args:
+        lst (list): Een lijst met gehele getallen.
+
+    Returns:
+        list: Een gesorteerde lijst van de modi van de gegeven getallen.
+
+    Examples:
+        >> modes([0, 0, 4, 7, 7])
+        [0, 7]
+
+        >> modes([1, 1, 2, 3, 2, 1])
+        [1]
+    """
+    modi = []
+
+
 
 """
+# XXX>
 ==========================[ HU TESTRAAMWERK ]================================
 Onderstaand staan de tests voor je code -- hieronder mag je niets wijzigen!
 Je kunt je code testen door deze file te runnen of met behulp van pytest.
 """
-import random
-import numpy as np
 import os
+import sys
 
 def __my_assert_args(function, args, expected_output, check_type=True):
     """
     Controleer of gegeven functie met gegeven argumenten het verwachte resultaat oplevert.
-
     Optioneel wordt ook het return-type gecontroleerd.
     """
     argstr = str(args).replace(',)', ')')
@@ -230,11 +247,6 @@ def __my_assert_args(function, args, expected_output, check_type=True):
     if type(expected_output) is float:
         # Vergelijk bij float als return-type op 7 decimalen om afrondingsfouten te omzeilen
         assert round(output - expected_output, 7) == 0, msg
-    elif type(expected_output) is list:
-        for i in range(len(expected_output)):
-            if type(expected_output[i]) is float:
-                # Vergelijk bij float als return-type op 7 decimalen om afrondingsfouten te omzeilen
-                assert round(output[i] - expected_output[i], 7) == 0, msg
     else:
         assert output == expected_output, msg
 
@@ -246,10 +258,22 @@ def test_id():
 
 
 def test_mean():
-    for _ in range(10):
-        lst_test = random.choices(range(-99, 100), k=6)
-        test_mean = statistics.mean(lst_test)
-        __my_assert_args(mean, (lst_test,), test_mean, False)
+    testcases = [
+        (([4, 2, 5, 8, 6],), 5.0),
+        (([1, 3, 2, 4, 6, 2, 4, 2],), 3.0)
+    ]
+
+    for case in testcases:
+        __my_assert_args(mean, case[0], case[1])
+
+
+def test_mean_simulated():
+    import random
+    import statistics
+
+    for lst_size in range(1, 11):
+        lst_test = [random.choice(range(5)) for _ in range(lst_size)]
+        __my_assert_args(mean, (lst_test,), statistics.mean(lst_test), False)
 
 
 def test_q1():
@@ -288,65 +312,87 @@ def test_q3():
         __my_assert_args(q3, case[0], case[1])
 
 
-
-def test_stdev():
-    for _ in range(10):
-        test_lst = random.choices(range(-99, 100), k=9)
-        test_std = statistics.pstdev(test_lst)
-        __my_assert_args(stdev, (test_lst,), test_std, False)
-
-
-def test_iqr():
+def test_var():
     testcases = [
         (([4, 2, 5, 8, 6],), 4.0),
-        (([1, 3, 4, 6, 4, 2],), 2.0),
-        (([1, 3, 5, 6, 2, 4, 1],), 4.0),
-        (([5, 7, 4, 4, 6, 2, 8],), 3.0),
-        (([0, 5, 5, 6, 7, 7, 12],), 2.0),
-        (([1, 4, 3, 5, 6, 2, 4, 1],), 3.0),
-        (([3, 5, 7, 8, 9, 11, 15, 16, 20, 21],), 9.0),
-        (([1, 2, 5, 6, 7, 9, 12, 15, 18, 19, 27],), 13.0),
-        (([0, 1, 2, 2, 2, 2, 3, 5, 5],), 2.5),
-
-    ]
-    for case in testcases:
-        __my_assert_args(iqr, case[0], case[1])
-
-def test_outliers():
-    testcases = [
-        (([10, 100, 102, 104, 110, 120, 130, 140, 200],), [10, 200]),
-        (([1, 2, 3, 4, 5, 6, 7, 8, 25],),[25]),
-        (([10, 12, 12, 13, 13, 14, 15, 25, 30, 50, 0],), [50]),
-        (([1, 1, 1, 2, 2, 3, 4, 5, 9, 30],), [30]),
-        (([10, 11, 12, 13, 14, 15, 16, 5, 3, 25, 50],), [50])
-        ]
-
-    for case in testcases:
-        __my_assert_args(outliers, case[0], case[1])
-
-def test_z_score():
-    testcases = [
-        (([1, 2, 3, 4, 5, 6, 7],), [-1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5]),
-        (([-1.463, -0.878, -0.293, 0.293, 0.878, 1.463, 2.048], ), [-1.4999389387753578, -1.0001220330641452, -0.5003051273529328, 0.00036616623129023194, 0.5001830719425027, 0.999999977653715, 1.4998168833649272]),
-        (([100, 101, 102, 105, 110], ), [-0.9969277961190788, -0.7200034083082231, -0.44307902049736747, 0.3876941429351995, 1.7723160819894777]),
-        (([5, 8, 12, 15, 20, 25], ), [-1.3446669139174723, -0.9045941057262995, -0.3178303614714025, 0.1222424467197703, 0.8556971270383916, 1.589151807357013]),
-        (([50, 60, 70, 80, 90, 100], ), [-1.4638501094227996, -0.8783100656536798, -0.2927700218845599, 0.2927700218845599, 0.8783100656536798, 1.4638501094227996])
+        (([1, 3, 2, 4, 6, 2, 4, 2],), 2.25)
     ]
 
     for case in testcases:
-        __my_assert_args(z_score, case[0], case[1])
+        __my_assert_args(var, case[0], case[1])
 
 
-def test_cumulatieve_frequenties():
+def test_var_simulated():
+    import random
+    import statistics
+
+    for lst_size in range(1, 11):
+        lst_test = [random.choice(range(5)) for _ in range(lst_size)]
+        __my_assert_args(var, (lst_test,), statistics.pvariance(lst_test), False)
+
+
+def test_std():
     testcases = [
-        (([1, 2, 1, 5, 6, 8, 1, 5],), {1: 3, 2: 4, 5: 6, 6: 7, 8: 8}),
-        (([5, 2, 6, 8, 1, 3, 2, 1, 5, 6, 7],), {1: 2, 2: 4, 3: 5, 5: 7, 6: 9, 7: 10, 8: 11}),
-        (([5, 2, 6, 8, 1, 3, 2, 1, 5],), {1: 2, 2: 4, 3: 5, 5: 7, 6: 8, 8: 9}),
-        (([5, 4, 3, 4, 7, 3, 2, 6, 4, 8, 9, 7],), {2: 1, 3: 3, 4: 6, 5: 7, 6: 8, 7: 10, 8: 11, 9: 12})
+        (([4, 2, 5, 8, 6],), 2.0),
+        (([1, 3, 2, 4, 6, 2, 4, 2],), 1.5)
     ]
-    for case in testcases:
-        __my_assert_args(cumulatieve_frequenties, case[0], case[1])
 
+    for case in testcases:
+        __my_assert_args(std, case[0], case[1])
+
+
+def test_cor():
+    testcases = [
+        (([1, 2, 3, 4], [1, 2, 3, 4]), 1.0),
+        (([1, 2, 3, 4], [-1, -2, -3, -4]), -1.0),
+        (([1, 2, 3, 4], [0, 0, 0, 0]), 0.0),
+        (([1, 2, 3, 4], [4, 7, 8, 15]), 0.9429903335828895),
+        (([29, 36, 41, 45, 48, 50, 56, 61, 67, 67, 67, 71, 75, 79, 83, 88], [4.1, 4.3, 4.0, 5.2, 4.8, 4.9, 5.9, 5.2, 4.9, 5.7, 6.2, 6.1, 4.4, 6.1, 6.8, 6.9]), 0.7872043771861374),
+    ]
+
+    for case in testcases:
+        __my_assert_args(cor, case[0], case[1])
+
+
+def test_std_simulated():
+    import random
+    import statistics
+
+    for lst_size in range(1, 11):
+        lst_test = [random.choice(range(5)) for _ in range(lst_size)]
+        __my_assert_args(std, (lst_test,), statistics.pstdev(lst_test), False)
+
+
+def test_freq():
+    testcases = [
+        (([4, 2, 5, 8, 6],), {2: 1, 4: 1, 5: 1, 6: 1, 8: 1}),
+        (([1, 3, 4, 6, 4, 2],), {1: 1, 2: 1, 3: 1, 4: 2, 6: 1}),
+        (([1, 3, 5, 6, 2, 4, 1],), {1: 2, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}),
+        (([1, 4, 3, 5, 6, 2, 4, 1],), {1: 2, 2: 1, 3: 1, 4: 2, 5: 1, 6: 1})
+    ]
+
+    for case in testcases:
+        __my_assert_args(freq, case[0], case[1])
+
+
+def test_modes():
+    testcases = [
+        (([4, 2, 5, 8, 6],), [2, 4, 5, 6, 8]),
+        (([1, 3, 4, 6, 4, 2],), [4]),
+        (([1, 3, 4, 6, 2, 4, 2],), [2, 4]),
+        (([1, 3, 2, 4, 6, 2, 4, 2],), [2])
+    ]
+
+    for case in testcases:
+        __my_assert_args(modes, case[0], case[1])
+
+def test_modes_simulated():
+    if sys.version_info[0] >= 3 and sys.version_info[1] >= 8:
+        import random
+        import statistics
+        for lst_size in range(1, 11):
+            lst_test = [random.choice(range(5)) for _ in range(lst_size)]
+            __my_assert_args(modes, (lst_test,), sorted(statistics.multimode(lst_test)))
 
 def __main():
     """ Test alle functies. """
@@ -355,9 +401,10 @@ def __main():
 
     try:
         print("\x1b[32m")   # Groene tekstkleur
-
         test_id()
+
         test_mean()
+        test_mean_simulated()
         print("Je functie mean(lst) werkt goed!")
 
         test_q1()
@@ -366,26 +413,28 @@ def __main():
         test_q3()
         print("Je functie q3(lst) werkt goed!")
 
-        test_stdev()
-        print("Je functie stdev(lst) werkt goed!")
+        test_var()
+        test_var_simulated()
+        print("Je functie var(lst) werkt goed!")
 
-        test_iqr()
-        print("Je functie iqr(lst) werkt goed!")
+        test_std()
+        test_std_simulated()
+        print("Je functie std(lst) werkt goed!")
 
-        test_outliers()
-        print("Je functie outliers(lst) werkt goed!")
+        test_cor()
+        print("Je functie cor(x, y) werkt goed!")
 
-        test_z_score()
-        print("Je functie z_score(lst) werkt goed!")
-        
+        test_freq()
+        print("Je functie freq(lst) werkt goed!")
+
         plot_grades([29, 36, 41, 45, 48, 50, 56, 61, 67, 67, 67, 71, 75, 79, 83, 88], [4.1, 4.3, 4.0, 5.2, 4.8, 4.9, 5.9, 5.2, 4.9, 5.7, 6.2, 6.1, 4.4, 6.1, 6.8, 6.9])
         print("Je functie plot_grades faalt niet!")
 
-        print("Optioneel:")
-        test_cumulatieve_frequenties()
-        print("Je functie cumulatieve_frequenties(lst) werkt goed!")
+        test_modes()
+        test_modes_simulated()
+        print("Je functie modes(lst) werkt goed!")
 
-        print(f"\nGefeliciteerd {naam}, alles lijkt te werken!")
+        print("\nGefeliciteerd, alles lijkt te werken!")
         print("\x1b[38;5;208m")
         print("Echter, test dit testframework niet of je de juiste plot bij vraag 8 hebt gemaakt.\x1b[0m")
         print("Controleer dus nog even of je plot correct is en lever dan pas je werk in op Canvas...")

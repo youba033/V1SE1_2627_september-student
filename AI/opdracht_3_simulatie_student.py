@@ -9,9 +9,8 @@ Opdracht: simulatie
 Peter van den Berg (peter.vandenberg@hu.nl)
 
 Opdracht:
-Werk onderstaande functies uit, om de tegenstanders 'Always cooperate',
-'Alternate' en 'Suspicious tit for tat' te verslaan. 
-LET OP: zie Canas en slides voor meer uitleg!
+Werk onderstaande functies uit, om de tegenstanders 'Always defect',
+'Tit for tat' en 'Alternate te verslaan'.
 
 Je kunt je functies testen met het gegeven raamwerk door het bestand
 uit te voeren (of met behulp van `pytest`, als je weet hoe dat werkt).
@@ -29,46 +28,25 @@ studentnummer = -1
 debuginfo = True
 
 """
-1. Implementatie is_always_cooperate
-    Implementeer onderstaande functie om te achterhalen of de tegenstander 'Always cooperate' is.
-
+1. Implementatie is_always_defect
+    Implementeer onderstaande functie om te achterhalen of de tegenstander 'Always defect' is.
 """
-def is_always_cooperate(my_history, opponent_history):
+def is_always_defect(my_history, opponent_history):
     """
-    Checkt of je tegenstander 'Always cooperate' is.
+    Checkt of je tegenstander 'Always defect' is.
 
     Args:
         my_history (list[bool]): Een lijst met jouw gespeelde acties in het verleden.
         opponent_history (list[bool]): Een lijst de door jouw tegenstander gespeelde acties in het verleden.
 
     Returns:
-        bool: True als je tegenstander 'Always cooperate' is, anders False.
+        bool: True als je tegenstander 'Always defect' is, anders False.
     """
     return
 
 """
-2. Implementatie play_against_always_cooperate
-    Implementeer onderstaande functie om de beste actie te spelen tegen 'Always cooperate'.
-
-"""
-def play_against_always_cooperate(my_history, opponent_history):
-    """
-    Geeft de actie terug die gespeeld zal worden tegen 'Always cooperate' door jouw agent, 
-    gegeven jouw en jouw tegenstanders' acties in het verleden.
-
-    Args:
-        my_history (list[bool]): Een lijst met jouw gespeelde acties in het verleden.
-        opponent_history (list[bool]): Een lijst de door jouw tegenstander gespeelde acties in het verleden.
-
-    Returns:
-        bool: Jouw actie; samenwerken (True) of zelfzuchtig zijn (False).
-    """
-    return
-
-"""
-3. Implementatie is_alternate
+2. Implementatie is_alternate
     Implementeer onderstaande functie om te achterhalen of de tegenstander 'Alternate' is.
-
 """
 def is_alternate(my_history, opponent_history):
     """
@@ -84,84 +62,25 @@ def is_alternate(my_history, opponent_history):
     return
 
 """
-4. Implementatie play_against_alternate
-    Implementeer onderstaande functie om de beste actie te spelen tegen 'Alternate'.
-
+3. Implementatie is_tit_for_tat
+    Implementeer onderstaande functie om te achterhalen of de tegenstander 'Tit for tat' is.
 """
-def play_against_alternate(my_history, opponent_history):
+def is_tit_for_tat(my_history, opponent_history):
     """
-    Geeft de actie terug die gespeeld zal worden tegen 'Alternate' door jouw agent, 
-    gegeven jouw en jouw tegenstanders' acties in het verleden.
+    Checkt of je tegenstander 'Tit for tat' is.
 
     Args:
         my_history (list[bool]): Een lijst met jouw gespeelde acties in het verleden.
         opponent_history (list[bool]): Een lijst de door jouw tegenstander gespeelde acties in het verleden.
 
     Returns:
-        bool: Jouw actie; samenwerken (True) of zelfzuchtig zijn (False).
+        bool: True als je tegenstander 'Tit for tat' is, anders False.
     """
     return
 
 """
-5. Implementatie is_sus_tit_for_tat
-    Implementeer onderstaande functie om te achterhalen of de tegenstander 'Suspicious tit for tat' is.
-
-"""
-def is_sus_tit_for_tat(my_history, opponent_history):
-    """
-    Checkt of je tegenstander 'Suspicious tit for tat' is.
-
-    Args:
-        my_history (list[bool]): Een lijst met jouw gespeelde acties in het verleden.
-        opponent_history (list[bool]): Een lijst de door jouw tegenstander gespeelde acties in het verleden.
-
-    Returns:
-        bool: True als je tegenstander 'Suspicious tit for tat' is, anders False.
-    """
-    return
-
-"""
-6. Implementatie play_against_sus_tit_for_tat
-    Implementeer onderstaande functie om de beste actie te spelen tegen 'Suspicious tit for tat'.
-
-"""
-def play_against_sus_tit_for_tat(my_history, opponent_history):
-    """
-    Geeft de actie terug die gespeeld zal worden tegen 'Suspicious tit for tat' door jouw agent, 
-    gegeven jouw en jouw tegenstanders' acties in het verleden.
-
-    Args:
-        my_history (list[bool]): Een lijst met jouw gespeelde acties in het verleden.
-        opponent_history (list[bool]): Een lijst de door jouw tegenstander gespeelde acties in het verleden.
-
-    Returns:
-        bool: Jouw actie; samenwerken (True) of zelfzuchtig zijn (False).
-    """
-    return
-
-"""
-7. Implementatie play_against_unknown
-    Implementeer onderstaande functie om de beste actie te spelen tegen een (nog) onbekende tegenstander.
-
-"""
-def play_against_unknown(my_history, opponent_history):
-    """
-    Geeft de actie terug die gespeeld zal worden tegen een onbekende tegenstander door jouw agent, 
-    gegeven jouw en jouw tegenstanders' acties in het verleden.
-
-    Args:
-        my_history (list[bool]): Een lijst met jouw gespeelde acties in het verleden.
-        opponent_history (list[bool]): Een lijst de door jouw tegenstander gespeelde acties in het verleden.
-
-    Returns:
-        bool: Jouw actie; samenwerken (True) of zelfzuchtig zijn (False).
-    """
-    return
-
-"""
-8. Optioneel: Implementatie is_final_round
+4. Optioneel: Implementatie is_final_round
     Implementeer onderstaande functie om te achterhalen of je in de laatste ronde zit.
-
 """
 def is_final_round(my_history, opponent_history):
     """
@@ -176,25 +95,12 @@ def is_final_round(my_history, opponent_history):
     """
     return
 
-"""
-9. Optioneel: Implementatie play_final_round
-    Implementeer onderstaande functie om de beste actie te spelen in de laatste ronde.
 
 """
-def play_final_round(my_history, opponent_history):
-    """
-    Geeft de actie terug die gespeeld zal worden in de laatste ronde.
+5. Implementatie strategy
+    Implementeer onderstaande functie om de winnende strategie te spelen.
 
-    Args:
-        my_history (list[bool]): Een lijst met jouw gespeelde acties in het verleden.
-        opponent_history (list[bool]): Een lijst de door jouw tegenstander gespeelde acties in het verleden.
-
-    Returns:
-        bool: Jouw actie; samenwerken (True) of zelfzuchtig zijn (False).
-    """
-    return
-
-
+"""
 def strategy(my_history, opponent_history):
     """
     Geeft de actie terug die gespeeld zal worden door jouw agent, 
@@ -207,31 +113,20 @@ def strategy(my_history, opponent_history):
     Returns:
         bool: Jouw actie; samenwerken (True) of zelfzuchtig zijn (False).
     """
-    # 10. Optioneel: uncomment deze code en implementeer is_final_round en play_final_round
-    # if is_final_round(my_history, opponent_history):
-    #     return play_final_round(my_history, opponent_history)
-    
-    if is_always_cooperate(my_history, opponent_history):
-        return play_against_always_cooperate(my_history, opponent_history)
-    elif is_alternate(my_history, opponent_history):
-        return play_against_alternate(my_history, opponent_history)
-    elif is_sus_tit_for_tat(my_history, opponent_history):
-        return play_against_sus_tit_for_tat(my_history, opponent_history)
-    else:
-        return play_against_unknown(my_history, opponent_history)
+    return
 
-def always_cooperate(my_history, opponent_history):
+def always_defect(my_history, opponent_history):
     """
-    Geeft de actie terug die 'Always cooperate' speelt.
+    Geeft de actie terug die 'Always defect' speelt.
 
     Args:
-        my_history (list[bool]): Een lijst met de gespeelde acties van 'Always cooperate' in het verleden.
+        my_history (list[bool]): Een lijst met de gespeelde acties van 'Always defect' in het verleden.
         opponent_history (list[bool]): Een lijst de door de tegenstander gespeelde acties in het verleden.
 
     Returns:
         bool: De gespeelde actie; samenwerken (True) of zelfzuchtig zijn (False).
     """
-    return True
+    return False
 
 def alternate(my_history, opponent_history):
     """
@@ -246,29 +141,38 @@ def alternate(my_history, opponent_history):
     """
     return len(opponent_history) % 2 == 0
 
-def sus_tit_for_tat(my_history, opponent_history):
+def tit_for_tat(my_history, opponent_history):
     """
-    Geeft de actie terug die 'Suspicious tit for tat' speelt.
+    Geeft de actie terug die 'Tit for tat' speelt.
 
     Args:
-        my_history (list[bool]): Een lijst met de gespeelde acties van 'Suspicious tit for tat' in het verleden.
+        my_history (list[bool]): Een lijst met de gespeelde acties van 'Tit for tat' in het verleden.
         opponent_history (list[bool]): Een lijst de door de tegenstander gespeelde acties in het verleden.
 
     Returns:
         bool: De gespeelde actie; samenwerken (True) of zelfzuchtig zijn (False).
     """
     if not opponent_history:
-        return False
+        return True
     return opponent_history[-1]
 
 strategies = {
-    "Always cooperate": always_cooperate,
+    "Always defect": always_defect,
     "Alternate": alternate,
-    "Suspicious tit for Tat": sus_tit_for_tat,
+    "Tit for Tat": tit_for_tat,
     "Jouw strategie": strategy
 }
 
-def play_game(strategy1, strategy2, rounds):
+class strategyError(Exception):
+    """Exception raised for incorrect strategy prediction.
+
+    """
+
+    def __init__(self, message):
+        self.message = message
+        super().__init__(self.message)
+
+def play_game(name1, name2, strategy1, strategy2, rounds):
     """
     Speelt een aantal ronden van het repeated prisoner's dilemma tussen twee agents.
 
@@ -293,6 +197,11 @@ def play_game(strategy1, strategy2, rounds):
             history.append((action1, action2))
         except Exception as e:
             errors.append(str(e))
+
+
+    history1 = [h[0] for h in history]
+    history2 = [h[1] for h in history]
+    
     return calculate_scores(history), errors
 
 def calculate_scores(history):
@@ -337,7 +246,7 @@ def run_tournament(strategies, rounds):
             if name1 < name2:
                 if debuginfo:
                     print(f"{name1} vs {name2}")
-                (score1, score2), errors = play_game(strat1, strat2, rounds)
+                (score1, score2), errors = play_game(name1, name2, strat1, strat2, rounds)
                 results[(name1, name2)] = (score1, score2)
                 total_scores[name1] += score1
                 total_scores[name2] += score2
@@ -358,7 +267,7 @@ if __name__ == "__main__":
     for strategy, score in positions:
         print("{}: {}".format(strategy, score))
         
-    if positions[0][0] == "Jouw strategie":
+    if positions[0][0] == "Jouw strategie" == "Jouw strategie":
         print("\x1b[32m")
         print("Jouw strategie heeft gewonnen!")
 
